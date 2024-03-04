@@ -1,0 +1,35 @@
+valid_serial:
+0x400957:  push    rbp
+0x400958:  mov     rbp, rsp
+0x40095b:  push    rbx
+0x40095c:  sub     rsp, 0x28
+0x400960:  mov     qword [rbp-0x28], rdi
+0x400964:  mov     dword [rbp-0x2c], esi
+0x400967:  mov     dword [rbp-0x18], 0x4141
+0x40096e:  mov     dword [rbp-0x14], 0x0
+0x400975:  jmp     0x4009ab
+0x400977:  mov     eax, dword [rbp-0x14]
+0x40097a:  movsxd  rbx, eax
+0x40097d:  mov     rax, qword [rbp-0x28]
+0x400981:  mov     rdi, rax
+0x400984:  call    strlen
+0x400989:  mov     rcx, rax
+0x40098c:  mov     rax, rbx
+0x40098f:  mov     edx, 0x0
+0x400994:  div     rcx
+0x400997:  mov     rax, qword [rbp-0x28]
+0x40099b:  add     rax, rdx
+0x40099e:  movzx   eax, byte [rax]
+0x4009a1:  movzx   eax, al
+0x4009a4:  add     dword [rbp-0x18], eax
+0x4009a7:  add     dword [rbp-0x14], 0x1
+0x4009ab:  cmp     dword [rbp-0x14], 0x4ff
+0x4009b2:  jle     0x400977
+0x4009b4:  mov     eax, dword [rbp-0x18]
+0x4009b7:  cmp     eax, dword [rbp-0x2c]
+0x4009ba:  sete    al
+0x4009bd:  movzx   eax, al
+0x4009c0:  add     rsp, 0x28
+0x4009c4:  pop     rbx
+0x4009c5:  pop     rbp
+0x4009c6:  retn    
