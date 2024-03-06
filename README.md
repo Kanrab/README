@@ -1,12 +1,5 @@
 # README Club
 
-Systems and exploit development club
+Systems development / exploit development
 
-* Week 1
-  * Warmup RE 
-  * Intro to Compilers
-  * Shellcode Injection
-  * TCP Deep Dive
-  * Virtual Memory
-    * Hierarchial Pagetable
-    * xv6 page table
+Each week will have it's own objectives and deliverables.
